@@ -22,14 +22,12 @@ print("Response Hash = ", response['hash'])
 # get teal program
 program = base64.b64decode(response['result'])
 
-# get your account's passphrase
 passphrase = "law skirt empower trim pilot camp drip supreme barely spawn again dizzy royal large version awake distance auto zebra cliff dwarf device two abandon inch"
 private_key = mnemonic.to_private_key(passphrase)
 public_key = account.address_from_private_key(private_key)
 print("Private key", private_key)
 print("Public key:", public_key)
 
-# create a transaction
 # create a transaction
 params = client.suggested_params()
 txn = ApplicationCallTxn(

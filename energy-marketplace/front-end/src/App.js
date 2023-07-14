@@ -38,8 +38,8 @@ function ElectricityMarketplace() {
       // Check if the contract exists in the local state
       if (accountInfo.appsLocalState && accountInfo.appsLocalState[contractAppId]) {
         const appLocalState = accountInfo.appsLocalState[contractAppId];
-        const availableElectricity = appLocalState["seller2_quantity"]; // Replace 'key1' with the actual key storing electricity value
-        setAvailableElectricity(availableElectricity);
+        const availableElectricity = appLocalState["seller2_quantity"]; 
+                setAvailableElectricity(availableElectricity);
       } else {
         console.log("Contract not found in the local state.");
       }
@@ -54,7 +54,7 @@ function ElectricityMarketplace() {
     // Prepare the transaction
    const passphrase = "scheme cherry fox theory net match rely matter link color genuine genius bone ketchup repeat bread bless senior smile fash minimum proof replace absent reopen";
        const params = await client.getTransactionParams().do();
-    const sender = algosdk.mnemonicToSecretKey(passphrase).addr; // Replace with your sender mnemonic
+    const sender = algosdk.mnemonicToSecretKey(passphrase).addr; 
     const txn = algosdk.makeApplicationNoOpTxn(
       sender,
       params,
@@ -127,7 +127,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your login logic here
+    // 
   };
 
   return (

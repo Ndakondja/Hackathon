@@ -1,0 +1,54 @@
+#pragma version 2
+txn ApplicationID
+int 0
+==
+bnz main_l2
+err
+main_l2:
+byte "seller1"
+txn Sender
+app_global_put
+byte "seller1_email"
+byte "seller1@example.com"
+app_global_put
+byte "seller1_energy_type"
+byte "Solar"
+app_global_put
+byte "seller1_quantity"
+int 1000
+app_global_put
+byte "seller1_price"
+int 10
+app_global_put
+byte "seller2"
+addr HFFYGRLUGU45ZH7RXDH7Z3DDYGSPMIJMZH6IYD2BSKU6CHSUPHVQ7TR6FY
+app_global_put
+byte "seller2_email"
+byte "seller2@example.com"
+app_global_put
+byte "seller2_energy_type"
+byte "Wind"
+app_global_put
+byte "seller2_quantity"
+int 2000
+app_global_put
+byte "seller2_price"
+int 15
+app_global_put
+byte "seller3"
+addr YFFAUTBNCE42C7HPDCCFYNUZ4HWQIKIBSCLRMVJUFBL3CP5OLR4ZK3AVEE
+app_global_put
+byte "seller3_email"
+byte "seller3@example.com"
+app_global_put
+byte "seller3_energy_type"
+byte "Hydro"
+app_global_put
+byte "seller3_quantity"
+int 1500
+app_global_put
+byte "seller3_price"
+int 12
+app_global_put
+int 1
+return
